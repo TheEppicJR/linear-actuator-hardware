@@ -202,7 +202,7 @@ class Motor:
                                 self.pcb_thickness / 2 + self.air_gap,
                                 self.magnet_width * (i + 1) - self.magnet_spacing / 2,
                                 magnet_end_y,
-                                "N40", mag_angle=90 + angle)
+                                "N40", mag_angle=90 - angle)
 
             self.sim.rect_with_mat(self.magnet_spacing / 2 + i * self.magnet_width,
                                 - self.pcb_thickness / 2 - self.air_gap,
@@ -290,7 +290,7 @@ if __name__ == '__main__':
 
     for i in range(10):
         m = Motor(f"test{i:03}", current=20, hallbeck=2)
-        m.build(i * 0.1, 4)
+        m.build(i * 0.5, 4)
         m.run()
         time.sleep(1)
     # m.analyze()

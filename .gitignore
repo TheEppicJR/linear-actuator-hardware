@@ -376,4 +376,8 @@ sim_data/*.lua
 sim_data/*.bmp
 sim_data/*.ans
 sim_data/*.fem
+sim_data/*.edge
+sim_data/*.ele
+sim_data/*.node
+sim_data/*.poly
 sim_data/femmoutfiletest*
